@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <!-- 为元素添加样式 -->
+    <style>
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: yellow;
+    }
+
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background: red;
+    }
+    </style>
+
+    <body>
+
+        <p><button onclick="myMove()">单击我</button></p>
+
+        <!-- 创建动画容器 -->
+        <div id="container">
+            <div id="animate"></div>
+        </div>
+
+        <!-- 动画代码 -->
+        <script>
+        function myMove() {
+            var elem = document.getElementById("animate");
+            var pos = 0;
+            var id = setInterval(frame, 5);
+            function frame() {
+                if (pos == 350 /*测试是否完成*/ ) {
+                    clearInterval(id);
+                } else {
+                    // 改变元素样式的代码
+                    pos++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                }
+            }
+        }
+        </script>
+    </body>
+</html>

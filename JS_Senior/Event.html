@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+    }
+</style>
+<body>
+    <button onclick="demo()">按钮</button>
+    <script>
+        function demo() {
+            alert("Hello");
+        }
+    </script>
+
+    <div class="div" onmouseout="onOut(this)" onmouseover="onOver(this)">
+    <script>
+        function onOver(ooj) {
+            ooj.innerHTML = "Hello";
+        }
+        function onOut(ooj) {
+            ooj.innerHTML = "World";
+        }
+    </script>
+    </div>
+
+    
+    <form action="">
+        <input type="text" onchange="changedemo(this)">
+    </form>
+    <script>
+        function changedemo(bg) {
+            alert("Hello, it is changed!");
+        }
+    </script>
+
+
+    <form action="">
+        <input type="text" onselect="changeDemo(this)">
+    </form>
+    <script>
+        function changeDamo(bg) {
+            bg.style.background="red";
+        }
+    </script>
+
+    
+</body>
+</html>

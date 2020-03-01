@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="txt">
+        <input type="button" id="btn" onclick="Demo()" value="按钮">
+    </form>
+    
+
+    <script src="../JS_Senior/js异常捕获和事件.js">
+                // 异常：
+        // js执行时，发生了错误，导致程序停止运行
+        // 异常抛出：当异常产生，并且将这个异常生成一个错误信息
+        // 异常捕获：
+        // try { 
+        //     发生异常的代码
+        // }catch(err) {
+        //     错误信息处理
+        // }
+
+        function demo() { 
+            try {
+                //产生异常的代码
+                alert(str);
+            }catch (err) {
+                alert(err);
+            }
+        }
+        demo();
+
+        function Demo() {
+            try {
+                var e = document.getElementById("txt").value;
+                if(e=="") {
+                    throw "用户没有输入";
+                }
+            } catch(err) {
+                    alert(err);
+            }
+        }
+    </script>
+</body>
+</html>
